@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, height=device-height">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Space Template by Subham Ojha</title>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="Body">
+
+<header id="Header" class="animsition">
+	<h1 id="HeaderTitle"><a id="HeaderTitleLink" href="#" title="Home"><img id="HeaderTitleLogo" src="http://i0.kym-cdn.com/photos/images/original/000/103/740/c2c.png" alt="xLab"></a></h1>
+	
+	<nav id="HeaderNav">
+	
+		<ul id="SolarSystemMenu">
+			<li class="planetItems" id="PlanetItem0" title="Events">
+				<ul class="satellites" id="Satellites0"></ul>
+				<div class="planetItemShapes"></div>
+			</li>
+			<li class="planetItems" id="PlanetItem1" title="Team">
+				<ul class="satellites" id="Satellites1"></ul>
+				<div class="planetItemShapes"></div>
+			</li>
+			<li class="planetItems" id="PlanetItem2" style="visibility:hidden;"><div class="planetItemShapes"></div></li>
+			<li class="planetItems" id="PlanetItem3"><a class="satelliteLinks" href="#" title=""><div class="planetItemShapes" style="font-size:16px;"></div></a></li>
+			<li class="planetItems" id="PlanetItem4"><a class="satelliteLinks" href="#" title=""><div class="planetItemShapes"></div></a></li>
+			<li class="planetItems" id="PlanetItem5"><a class="satelliteLinks" href="#" title=""><div class="planetItemShapes">&#xf003;</div><span id="ContentLabel5" class="contentLabels"></span></a></li>
+		</ul>
+		
+	</nav>
+	
+</header>
+
+<footer id="Footer">
+	<ul id="FooterLinkList">
+		<li class="footerLinkListItems"><a id="FooterFacebookLink" class="footerLinks" href="https://www.facebook.com/juzz.shubham" target="_blank">&#xf09a;</a></li>
+		<li class="footerLinkListItems"><a id="FooterLinkedInLink" class="footerLinks" href="https://www.linkedin.com/in/subham-ojha" target="_blank">&#xf0e1;</a></li>
+		<li class="footerLinkListItems"><a id="FooterTwitterLink" class="footerLinks" href="#" target="_blank">&#xf099;</a></li>
+	</ul>
+	<small id="FooterCopyright"><a style="color: #fff;" href="https://www.linkedin.com/in/subham-ojha">Subham Ojha</a> &copy; All Rights Reserved</small>
+	<audio controls autoplay>
+	  <source src="di.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+	</audio>
+	
+</footer>
+<div class="layer" id="particles-js" data-depth="0.3"></div>
+<div class="layer" id="logo1" data-depth="0.3" style="position: absolute; top: 40%; left:30%; font-size:300%; border-style: solid; line-height:40%; margin:0px;"><h1> LogoHere </h1></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/jquery.parallax.min.js"></script>
+<script>
+$('#Body').parallax({
+	invertX: true,
+	invertY: true,
+	scalarX: 10,
+	frictionY: 0
+});
+</script>
+
+
+
+
+
+</body>
+</html>

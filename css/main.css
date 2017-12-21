@@ -1,0 +1,874 @@
+
+@font-face {
+	font-family: Roboto-Regular;
+	src:
+		local('Roboto-Regular'),
+		url('fonts/Roboto/Roboto-Regular.ttf')
+		format('truetype')
+}
+@font-face {
+	font-family: OpenSans-Regular;
+	src:
+		local('OpenSans-Regular'),
+		url('fonts/Open_Sans/OpenSans-Regular.ttf')
+		format('truetype')
+}
+@font-face {
+	font-family: OpenSans-Light;
+	src:
+		local('OpenSans-Light'),
+		url('fonts/Open_Sans/OpenSans-Light.ttf')
+		format('truetype')
+}
+@font-face {
+	font-family: FuturaStd-Medium;
+	src:
+		local('FuturaStd-Medium'),
+		url('fonts/FuturaStd-Medium.otf')
+		format('opentype')
+}
+#Body {
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	background: url("../images/main.png");
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative
+}
+@-webkit-keyframes HeaderTitleDropIn {
+	to { top: 2vh }
+}
+@-moz-keyframes HeaderTitleDropIn {
+	to { top: 2vh }
+}
+@keyframes HeaderTitleDropIn {
+	to { top: 2vh }
+}
+#HeaderTitle {
+	position: absolute;
+	top: calc((2vh + 62px) * -1);
+	left: 3.5vh;
+	width: 48px;
+	margin: 0;
+	z-index: 9;
+	-webkit-animation: HeaderTitleDropIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-moz-animation: HeaderTitleDropIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	animation: HeaderTitleDropIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-webkit-animation-delay: 2.8s;
+	-moz-animation-delay: 2.8s;
+	animation-delay: 2.8s
+}
+#HeaderTitleLink {
+	display: block
+}
+#HeaderTitleLogo {
+	width: 48px;
+	height: 62px;
+	vertical-align: bottom
+}
+@-webkit-keyframes VRModeLinkDropIn {
+	to { top: 4vh }
+}
+@-moz-keyframes VRModeLinkDropIn {
+	to { top: 4vh }
+}
+@keyframes VRModeLinkDropIn {
+	to { top: 4vh }
+}
+
+#HeaderNav {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2
+}
+#SolarSystemMenu {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0
+}
+.planetItems {
+	position: absolute;
+	list-style-type: none;
+	opacity: 0;
+	-webkit-transform: scale(0.01);
+	-moz-transform: scale(0.01);
+	transform: scale(0.01);
+	backface-visibility: hidden
+}
+@-webkit-keyframes horizontal1 {
+	0% {
+		-webkit-transform: translateY(-5px)
+	}
+	100% {
+		-webkit-transform: translateY(0)
+	}
+}
+@-moz-keyframes horizontal1 {
+	0% {
+		-moz-transform: translateY(-5px)
+	}
+	100% {
+		-moz-transform: translateY(0)
+	}
+}
+@keyframes horizontal1 {
+	0% {
+		transform: translateY(-5px)
+	}
+	100% {
+		transform: translateY(0)
+	}
+}
+
+@-webkit-keyframes horizontal2 {
+	  0% {
+		-webkit-transform: translateY(0)
+	}
+	100% {
+		-webkit-transform: translateY(-5px)
+	}
+}
+@-moz-keyframes horizontal2 {
+	  0% {
+		-moz-transform: translateY(0)
+	}
+	100% {
+		-moz-transform: translateY(-5px)
+	}
+}
+@keyframes horizontal2 {
+	  0% {
+		transform: translateY(0)
+	}
+	100% {
+		transform: translateY(-5px)
+	}
+}
+.planetItems:hover {
+	z-index: 3
+}
+.planetItemShapes {
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+	color: #92278f;
+	text-align: center;
+	cursor: pointer;
+	-webkit-transition: all .3s ease-out;
+	-moz-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+	backface-visibility: hidden
+}
+.satellites {
+	position: absolute;
+	z-index: 1;
+	top: calc((100% - 23px) / 2);
+	left: calc((100% - 23px) / 2);
+	width: 23px;
+	height: 23px;
+	padding: 0
+}
+#PlanetItem0.clicked #Satellites0,
+#PlanetItem1.clicked #Satellites1,
+#PlanetItem2.clicked #Satellites2 {
+	top: calc((100% - 253px) / 2);
+	left: calc((100% - 253px) / 2);
+	padding: 115px
+}
+.satellite {
+	position: absolute;
+	z-index: 1;
+	width: 23px;
+	height: 23px;
+	list-style-type: none;
+	opacity: 0;
+	-webkit-transform-origin: 11.5px 11.5px;
+	-moz-transform-origin: 11.5px 11.5px;
+	transform-origin: 11.5px 11.5px;
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+	-webkit-transition: all .5s cubic-bezier(0, 1.46, 0.98, 1.18);
+	-moz-transition: all .5s cubic-bezier(0, 1.46, 0.98, 1.18);
+	transition: all .5s cubic-bezier(0, 1.46, 0.98, 1.18);
+	backface-visibility: hidden
+}
+.satellite:hover {
+	z-index: 3
+}
+
+
+
+
+/* --- Planets --- */
+
+@-webkit-keyframes zoomInPlanetItem0 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(0, 62px)
+	}
+}
+@-moz-keyframes zoomInPlanetItem0 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1) translate(0, 62px)
+	}
+}
+@keyframes zoomInPlanetItem0 {
+	to {
+		opacity: 1;
+		transform: scale(1) translate(0, 62px)
+	}
+}
+@-webkit-keyframes zoomInPlanetItem1 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(-176px, -120px)
+	}
+}
+@-moz-keyframes zoomInPlanetItem1 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1) translate(-176px, -120px)
+	}
+}
+@keyframes zoomInPlanetItem1 {
+	to {
+		opacity: 1;
+		transform: scale(1) translate(-176px, -120px)
+	}
+}
+@-webkit-keyframes zoomInPlanetItem2 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(176px, -120px)
+	}
+}
+@-moz-keyframes zoomInPlanetItem2 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1) translate(176px, -120px)
+	}
+}
+@keyframes zoomInPlanetItem2 {
+	to {
+		opacity: 1;
+		transform: scale(1) translate(176px, -120px)
+	}
+}
+@-webkit-keyframes zoomInPlanetItem3 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1)  translate(-211px, 140px)
+	}
+}
+@-moz-keyframes zoomInPlanetItem3 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1)  translate(-211px, 140px)
+	}
+}
+@keyframes zoomInPlanetItem3 {
+	to {
+		opacity: 1;
+		transform: scale(1)  translate(-211px, 140px)
+	}
+}
+@-webkit-keyframes zoomInPlanetItem4 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(211px, 140px)
+	}
+}
+@-moz-keyframes zoomInPlanetItem4 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1) translate(211px, 140px)
+	}
+}
+@keyframes zoomInPlanetItem4 {
+	to {
+		opacity: 1;
+		transform: scale(1) translate(211px, 140px)
+	}
+}
+@-webkit-keyframes zoomInPlanetItem5 {
+	to {
+		opacity: 1;
+		-webkit-transform: scale(1)
+	}
+}
+@-moz-keyframes zoomInPlanetItem5 {
+	to {
+		opacity: 1;
+		-moz-transform: scale(1)
+	}
+}
+@keyframes zoomInPlanetItem5 {
+	to {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
+#PlanetItem0 {
+	top: 0%;
+	left: 65%;
+	-webkit-transform: scale(.01) translate(0, 62px);
+	-moz-transform: scale(.01) translate(0, 62px);
+	transform: scale(.01) translate(0, 62px);
+	-webkit-animation: zoomInPlanetItem0 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-moz-animation: zoomInPlanetItem0 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	animation: zoomInPlanetItem0 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s
+}
+#PlanetItem1 {
+	top: 70%;
+	left: 30%;
+	-webkit-transform: scale(.01) translate(-176px, -120px);
+	-moz-transform: scale(.01) translate(-176px, -120px);
+	transform: scale(.01) translate(-176px, -120px);
+	-webkit-animation: zoomInPlanetItem1 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-moz-animation: zoomInPlanetItem1 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	animation: zoomInPlanetItem1 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	animation-delay: 1.2s
+}
+#PlanetItem2 {
+	top: 80%;
+	left: 40%;
+	-webkit-transform: scale(.01) translate(176px, -120px);
+	-moz-transform: scale(.01) translate(176px, -120px);
+	transform: scale(.01) translate(176px, -120px);
+	-webkit-animation: zoomInPlanetItem2 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-moz-animation: zoomInPlanetItem2 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	animation: zoomInPlanetItem2 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-webkit-animation-delay: 1.4s;
+	-moz-animation-delay: 1.4s;
+	animation-delay: 1.4s
+}
+#PlanetItem3 {
+	top: 60%;
+	left: 50%;
+	-webkit-transform: scale(.01) translate(-211px, 140px);
+	-moz-transform: scale(.01) translate(-211px, 140px);
+	transform: scale(.01) translate(-211px, 140px);
+	-webkit-animation: zoomInPlanetItem3 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-moz-animation: zoomInPlanetItem3 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	animation: zoomInPlanetItem3 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-webkit-animation-delay: 1.6s;
+	-moz-animation-delay: 1.6s;
+	animation-delay: 1.6s
+}
+#PlanetItem4 {
+	top: calc(50vh - 33.5px);
+	left: calc(50vw - 33.5px);
+	-webkit-transform: scale(.01) translate(211px, 140px);
+	-moz-transform: scale(.01) translate(211px, 140px);
+	transform: scale(.01) translate(211px, 140px);
+	-webkit-animation: zoomInPlanetItem4 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-moz-animation: zoomInPlanetItem4 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	animation: zoomInPlanetItem4 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+	-webkit-animation-delay: 1.8s;
+	-moz-animation-delay: 1.8s;
+	animation-delay: 1.8s
+}
+#PlanetItem0{
+    width: 200px;
+	height: 200px;
+	-webkit-transform-origin: 64px 64px;
+	-moz-transform-origin: 64px 64px;
+	transform-origin: 64px 64px
+}
+#PlanetItem1,
+#PlanetItem2 {
+	width: 128px;
+	height: 128px;
+	-webkit-transform-origin: 64px 64px;
+	-moz-transform-origin: 64px 64px;
+	transform-origin: 64px 64px
+}
+#PlanetItem3,
+#PlanetItem4 {
+	width: 67px;
+	height: 67px;
+	-webkit-transform-origin: 33.5px 33.5px;
+	-moz-transform-origin: 33.5px 33.5px;
+	transform-origin: 33.5px 33.5px
+}
+@-webkit-keyframes GetInTouchJumpIn {
+	to { bottom: 4vh }
+}
+@-moz-keyframes GetInTouchJumpIn {
+	to { bottom: 4vh }
+}
+@keyframes GetInTouchJumpIn {
+	to { bottom: 4vh }
+}
+#PlanetItem5 {
+	position: absolute;
+	bottom: calc((4vh + 41px) * -1);
+	left: 4vh;
+	width: 41px;
+	height: 41px;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	transform: scale(1);
+	-webkit-animation: GetInTouchJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-moz-animation: GetInTouchJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	animation: GetInTouchJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-webkit-animation-delay: 2.8s;
+	-moz-animation-delay: 2.8s;
+	animation-delay: 2.8s
+}
+#PlanetItem0::before{
+    content: " ";
+	display: block;
+	position: absolute;
+	top: -15.5px;
+	left: -15.5px;
+	width: 228px;
+	height: 228px;
+	border-radius: 114px;
+	border: 1px solid rgba(255, 255, 255, .7)}
+#PlanetItem1::before,
+#PlanetItem2::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -16.5px;
+	left: -16.5px;
+	width: 159px;
+	height: 159px;
+	border-radius: 79.5px;
+	border: 1px solid rgba(255, 255, 255, .7)
+}
+#PlanetItem0::after{
+    content: " ";
+	display: block;
+	position: absolute;
+	top: -6.5px;
+	left: -6.5px;
+	width: 210px;
+	height: 210px;
+	border-radius: 105px;
+	border: 2px solid #fff
+}
+#PlanetItem1::after,
+#PlanetItem2::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 134px;
+	height: 134px;
+	border-radius: 67px;
+	border: 2px solid #fff
+}
+
+#PlanetItem3::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 85px;
+	height: 85px;
+	border-radius: 42.5px;
+	border: 1px solid rgba(255, 255, 255, .7)
+}
+#PlanetItem4::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	border: 1px solid rgba(255, 255, 255, .7)
+}
+#PlanetItem3::after
+{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	width: 71px;
+	height: 71px;
+	border-radius: 35.5px;
+	border: 2px solid #fff
+}
+
+#PlanetItem4::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	width: 105px;
+	height: 105px;
+	border-radius: 51.5px;
+	border: 2px solid #fff
+}
+#PlanetItem5::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: -7px;
+	left: -7px;
+	width: 53px;
+	height: 53px;
+	border-radius: 26.5px;
+	border: 1px solid rgba(255, 255, 255, .7)
+}
+#PlanetItem0 .planetItemShapes
+{
+    width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	line-height: 128px;
+	-webkit-transform-origin: 64px 64px;
+	-moz-transform-origin: 64px 64px;
+	transform-origin: 64px 64px
+}
+#PlanetItem1 .planetItemShapes,
+#PlanetItem2 .planetItemShapes {
+	width: 128px;
+	height: 128px;
+	border-radius: 64px;
+	line-height: 128px;
+	-webkit-transform-origin: 64px 64px;
+	-moz-transform-origin: 64px 64px;
+	transform-origin: 64px 64px
+}
+
+#PlanetItem3 .planetItemShapes {
+	width: 67px;
+	height: 67px;
+	border-radius: 33.5px;
+	line-height: 67px;
+	font-family: FontAwesome;
+	font-size: 34px;
+	-webkit-transform-origin: 33.5px 33.5px;
+	-moz-transform-origin: 33.5px 33.5px;
+	transform-origin: 33.5px 33.5px
+}
+#PlanetItem4 .planetItemShapes {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	line-height: 67px;
+	font-family: FontAwesome;
+	font-size: 34px;
+	-webkit-transform-origin: 33.5px 33.5px;
+	-moz-transform-origin: 33.5px 33.5px;
+	transform-origin: 33.5px 33.5px
+}
+#PlanetItem5 .planetItemShapes {
+	color: #000;
+	width: 41px;
+	height: 41px;
+	border-radius: 20.5px;
+	font-family: FontAwesome;
+	font-size: 20px;
+	line-height: 41px;
+	-webkit-transform-origin: 20.5px 20.5px;
+	-moz-transform-origin: 20.5px 20.5px;
+	transform-origin: 20.5px 20.5px
+}
+#PlanetItem0:hover .planetItemShapes,
+#PlanetItem1:hover .planetItemShapes,
+#PlanetItem2:hover .planetItemShapes,
+#PlanetItem3:hover .planetItemShapes,
+#PlanetItem4:hover .planetItemShapes,
+#PlanetItem5:hover .planetItemShapes {
+	background-color: transparent;
+	color: #fff
+}
+#PlanetItem0 .planetItemShapes,
+#PlanetItem1 .planetItemShapes,
+#PlanetItem2 .planetItemShapes {
+	background-repeat: no-repeat;
+	font-family: FuturaStd-Medium;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 198px;
+	letter-spacing: 1.5px
+}
+#PlanetItem0 .planetItemShapes {
+	background-image: url("");
+	background-size: 100% 100%;
+	
+}
+#PlanetItem1 .planetItemShapes {
+	background-image: url();
+	background-position: center 32px
+}
+#PlanetItem2 .planetItemShapes {
+	background-image: url();
+	background-position: center 12px
+}
+#PlanetItem0:hover .planetItemShapes,
+#PlanetItem1:hover .planetItemShapes,
+#PlanetItem2:hover .planetItemShapes {
+	background-image: none;
+	font-family: OpenSans-Light;
+	font-size: 20px;
+	line-height: 128px;
+	text-transform: uppercase
+}
+
+
+/* --- //Planets --- */
+
+@-webkit-keyframes FooterCopyrightJumpIn {
+	to { bottom: 2vh }
+}
+@-moz-keyframes FooterCopyrightJumpIn {
+	to { bottom: 2vh }
+}
+@keyframes FooterCopyrightJumpIn {
+	to { bottom: 2vh }
+}
+#Footer {
+	position: absolute;
+	right: 2vh;
+	bottom: calc((2vh + 60px) * -1);
+	z-index: 4;
+	width: 138px;
+	-webkit-animation: FooterCopyrightJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-moz-animation: FooterCopyrightJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	animation: FooterCopyrightJumpIn .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+	-webkit-animation-delay: 2.8s;
+	-moz-animation-delay: 2.8s;
+	animation-delay: 2.8s
+}
+#FooterLinkList {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+	width: 138px;
+	border-bottom: 1px solid #f0f1f1;
+	font-family: FontAwesome;
+	font-size: 16px;
+	text-align: center
+}
+.footerLinkListItems {
+	margin-bottom: 7px;
+	width: calc(136px / 3);
+	padding: 0;
+	border-left: 1px solid #f0f1f1
+}
+.footerLinkListItems:first-child {
+	border-left: none
+}
+.footerLinks {
+	-webkit-transition: color .2s ease-out;
+	-moz-transition: color .2s ease-out;
+	transition: color .2s ease-out
+}
+.footerLinks:link,
+.footerLinks:visited,
+.footerLinks:hover,
+.footerLinks:active,
+.footerLinks:focus {
+	color: #f0f1f1;
+	text-decoration: none;
+	outline: none
+}
+#FooterFacebookLink:hover,
+#FooterFacebookLink:active {
+	color: #3b5998
+}
+#FooterLinkedInLink:hover,
+#FooterLinkedInLink:active {
+	color: #0077B5
+}
+#FooterTwitterLink:hover,
+#FooterTwitterLink:active {
+	color: #0084b4
+}
+#FooterCopyright {
+	display: block;
+	color: #f0f1f1;
+	width: 138px;
+	padding-top: 3px;
+	font-family: OpenSans-Light;
+	font-size: 10px;
+	text-align: center
+}
+canvas {
+	display: block;
+	vertical-align: bottom
+}
+#particles-js {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	z-index: 0
+}
+@media only screen and (max-width: 767px) {
+	#Body {
+		height: 1065px;
+		overflow-x: hidden;
+		overflow-y: visible
+	}
+	@-webkit-keyframes HeaderTitleDropInMob {
+		to {
+			top: 2vmin
+		}
+	}
+	@-moz-keyframes HeaderTitleDropInMob {
+		to {
+			top: 2vmin
+		}
+	}
+	@keyframes HeaderTitleDropInMob {
+		to {
+			top: 2vmin
+		}
+	}
+	#HeaderTitle {
+		top: calc((2vmin + 62px) * -1);
+		left: 2vmin;
+		-webkit-animation: HeaderTitleDropInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+		-moz-animation: HeaderTitleDropInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+		animation: HeaderTitleDropInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards
+	}
+	#SolarSystemMenu {
+		height: 1014px;
+		padding-top: 51px
+	}
+	.planetItems {
+		position: relative
+	}
+	@-webkit-keyframes zoomInPlanetItems {
+		to {
+			opacity: 1;
+			-webkit-transform: scale(1)
+		}
+	}
+	@-moz-keyframes zoomInPlanetItems {
+		to {
+			opacity: 1;
+			-moz-transform: scale(1)
+		}
+	}
+	@keyframes zoomInPlanetItems {
+		to {
+			opacity: 1;
+			transform: scale(1)
+		}
+	}
+	#PlanetItem0,
+	#PlanetItem1,
+	#PlanetItem2,
+	#PlanetItem3,
+	#PlanetItem4 {
+		top: 0;
+		left: 0;
+		margin: 0 auto 64px;
+		-webkit-transform: scale(.01);
+		-moz-transform: scale(.01);
+		transform: scale(.01);
+		-webkit-transition: all .3s ease-out;
+		-moz-transition: all .3s ease-out;
+		transition: all .3s ease-out;
+		-webkit-animation: zoomInPlanetItems 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+		-moz-animation: zoomInPlanetItems 1s cubic-bezier(.33,.99,.77,1.12) forwards;
+		animation: zoomInPlanetItems 1s cubic-bezier(.33,.99,.77,1.12) forwards
+	}
+	@-webkit-keyframes GetInTouchJumpInMob {
+		100% {
+			bottom: calc(2vmin + 7px)
+		}
+	}
+	@-moz-keyframes GetInTouchJumpInMob {
+		100% {
+			bottom: calc(2vmin + 7px)
+		}
+	}
+	@keyframes GetInTouchJumpInMob {
+		100% {
+			bottom: calc(2vmin + 7px)
+		}
+	}
+	#PlanetItem5 {
+		bottom: -55px;
+		left: calc(2vmin + 7px);
+		-webkit-animation: GetInTouchJumpInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+		-moz-animation: GetInTouchJumpInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards;
+		animation: GetInTouchJumpInMob .5s cubic-bezier(0.25, 1.46, 0.89, 1.21) forwards
+	}
+	#PlanetItem0.clicked,
+	#PlanetItem1.clicked,
+	#PlanetItem2.clicked {
+		margin-bottom: 240px
+	}
+	.satellites {
+		height: 0;
+		background-image: url();
+		background-repeat: repeat-y;
+		background-position: center;
+		-webkit-transition: all .3s ease-out;
+		-moz-transition: all .3s ease-out;
+		transition: all .3s ease-out
+	}
+	#PlanetItem0.clicked #Satellites0,
+	#PlanetItem1.clicked #Satellites1,
+	#PlanetItem2.clicked #Satellites2 {
+		top: 145px;
+		left: calc((100% - 23px) / 2);
+		height: 184px;
+		padding: 0
+	}
+	.satellite {
+		position: static;
+		margin-top: 23px
+	}
+	
+	#PlanetItem0.clicked #Satellites0_0,
+	#PlanetItem0.clicked #Satellites0_1,
+	#PlanetItem0.clicked #Satellites0_2,
+	#PlanetItem0.clicked #Satellites0_3,
+	#PlanetItem1.clicked #Satellites1_0,
+	#PlanetItem1.clicked #Satellites1_1,
+	#PlanetItem1.clicked #Satellites1_2,
+	#PlanetItem1.clicked #Satellites1_3,
+	#PlanetItem2.clicked #Satellites2_0,
+	#PlanetItem2.clicked #Satellites2_1,
+	#PlanetItem2.clicked #Satellites2_2,
+	#PlanetItem2.clicked #Satellites2_3 {
+		opacity: 1;
+		-webkit-transform: none;
+		-moz-transform: none;
+		transform: none
+	}
+
+@media only screen and (max-width: 400px) {
+	.noBreakInMob {
+		display: inline
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.subContentSubTitle {
+		font-size: 2.5rem
+	}
+}
